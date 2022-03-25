@@ -1,0 +1,32 @@
+
+.enlace{
+    position: left;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+.logo{
+    width: 7%;
+    height: 7%;
+}
+
+#menu{
+    float: left;
+    list-style-type:none;
+    display: flex;
+    /* margin: 0 15% 0 15%; */
+    width: 100%;
+}
+
+#menu li{
+    display: inline-block;
+    margin: 1% 5% 1% 5%;
+    padding: 1% 5% 1% 5%;
+    background-color: gray;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
