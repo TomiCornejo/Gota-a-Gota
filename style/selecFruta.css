@@ -1,0 +1,42 @@
+#contFrutas{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+#selecFrutas{
+    float: left;
+    list-style-type:none;
+    padding: 20px 0 20px 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.selecFruta{
+    padding: 15px 25px;
+	width: 25%;
+    border: 1px;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.selecFruta div{
+    padding: 15px 25px;
+	width: 25%;
+}
+.selecFruta a{
+    background: #4f3e8c;
+	border-radius: 5px;
+	padding: 35px 20px;
+	min-width: 225px;
+	min-height: 315px;
+	max-height: 370px;
+	width: 100%;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
+}
