@@ -1,0 +1,11 @@
+.tabla{
+    margin-top: 10%;
+    margin-right: 5%;
+    float: right;
+    font-size: 300%;
+    max-width: 500px;
+}
+
+.tabla, th, td { 
+    border: 5px solid rgb(11, 86, 109);
+}
