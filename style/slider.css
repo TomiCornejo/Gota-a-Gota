@@ -1,5 +1,10 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+
 .container{
-    margin: 2.5% 20% 2.5% 20%;
+    margin: 5% 1.5% 5% 1.5%;
     background-color: #4f3e8c;
     border-radius: 5%;
     max-width: 800px;
