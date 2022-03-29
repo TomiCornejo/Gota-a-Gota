@@ -1,10 +1,8 @@
 aside{
     float: right;
-    height: 275px;
     width: 20%;
     max-width: 450px;
-    margin-top: 8%;
-    margin-right: 2%;
+    margin: 5% 1.5% 0 1.5%;
     background-color: #4f3e8c;
     text-align: center;
     border-radius: 10%;
@@ -31,11 +29,10 @@ section{
     float: left;
     width: 76%;
     max-width: 1100px;
-    height: 430px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    margin-bottom: 5%;
 } 
 
 article{
@@ -47,7 +44,7 @@ article{
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;
-    margin: 10% 0 0 5%;
+    margin: 5% 1.5% 0 1.5%;
     padding: 30px;
     background-color: #4f3e8c;
     box-sizing: border-box;
@@ -70,4 +67,3 @@ article a{
     font-weight: 550;
     font-size: 30px;
 }
-
