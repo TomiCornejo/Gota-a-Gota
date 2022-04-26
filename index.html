@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/principal.css">
     <link rel="stylesheet" href="style/slider.css">
     <title>Gota a Gota</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" href="img/logoGota.ico">
 </head>
 
@@ -27,24 +28,52 @@
     </nav>
 
     <section>
-        <div class="container">
-            <ul class="slider">
-                <li id="slide1"><h1>Peras</h1><img src="img/peras.jpg"></li>
-                <li id="slide2"><h1>Lechuga</h1><img src="img/lechugas.jpg"></li>
-                <li id="slide3"><h1>Platano</h1><img src="img/platanos.jpg"></li>
-                <li id="slide4"><h1>Zanahoria</h1><img src="img/zanahorias.jpg"></li>
-            </ul>
-
-            <ul class="num">
-                <li><a href="#slide1">1</a></li>
-                <li><a href="#slide2">2</a></li>
-                <li><a href="#slide3">3</a></li>
-                <li><a href="#slide4">4</a></li>
-            </ul>
-        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/platanos.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Platano</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/peras.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/lechugas.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
 
     <footer>
+        <!-- <footer class="text-center text-lg-start">
+            <!- Copyright ->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright:
+              <a class="text-dark" href="">GotaaGota.com</a>
+            </div>
+            <!- Copyright ->
+          </footer> -->
         <div id="sobreNosotros">
             <h2>SOBRE NOSOTROS</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?</p>
@@ -54,6 +83,8 @@
             <small>&copy; 2022 <b>Gota a Gota</b> - Todos os Derechos Reservados</small>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>

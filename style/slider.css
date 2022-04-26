@@ -86,3 +86,7 @@ ul.slider li:target{
     transform: translateY(-5px);
     box-shadow: 0 12px 16px rgba(0,0,0,0.2);
 }
+
+.carousel-item{
+    margin: 0;
+}
