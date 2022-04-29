@@ -1,0 +1,67 @@
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+nav ul {
+  float: left;
+}
+nav ul li {
+  margin: 0px 15px 0px 15px;
+}
+
+section #botonPlanta {
+  margin-top: 1%;
+  float: right;
+  margin-right: 1%;
+}
+section #tablaSeguimiento {
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 5%;
+  width: 100%;
+  max-width: 98%;
+}
+section #tablaSeguimiento tr {
+  text-align: center;
+}
+section #tablaSeguimiento tr td, section #tablaSeguimiento tr th {
+  vertical-align: middle;
+}
+
+#agregarPlanta .dropdown {
+  text-align: center;
+}
+#agregarPlanta .form-check {
+  margin-top: 1%;
+  flex: left;
+}
+#agregarPlanta .form-control {
+  margin-top: 2%;
+}
+
+.form-check-input:checked {
+  background-color: green;
+}
+
+footer {
+  padding: 1em 0;
+  margin-top: auto;
+}
+footer #sobreNosotros {
+  float: left;
+  margin-left: 50px;
+}
+footer #copy {
+  float: right;
+  margin-right: 50px;
+}
+
+/*# sourceMappingURL=seguimiento.css.map */
