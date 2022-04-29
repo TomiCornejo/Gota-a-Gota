@@ -1,0 +1,20 @@
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+section {
+  margin: 5%;
+}
+section #ingresar {
+  margin: 5%;
+}
+
+/*# sourceMappingURL=ingresar.css.map */
