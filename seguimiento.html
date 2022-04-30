@@ -79,59 +79,66 @@
 
     <section>
         <!-- Button trigger modal -->
-        <button id="botonPlanta" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button id="botonPlanta" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             Agregar planta🌱
         </button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+            <div class="modal-dialog ">
+                <div class="modal-content bg-success text-white border-dark">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Agregar planta</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div id="agregarPlanta" class="modal-body">
                         <div class="dropdown">
                             <!-- nombre y color del boton-->
-                            <button class="btn btn-success dropdown-toggle bg-gradient" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-success dropdown-toggle bg-gradient border-dark" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 Planta
                             </button>
                             <!-- controlar el background del dropdown-->
-                            <ul class="dropdown-menu dropdown-menu-dark bg-success "
+                            <ul class="dropdown-menu dropdown-menu-dark bg-success"
                                 aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="#">Zanahoria</a></li>
                                 <li><a class="dropdown-item" href="#">Manzana</a></li>
                             </ul>
                         </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Días
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Meses
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Años
-                            </label>
+                        <div id="containerEdad">
+                            <div class="form-check">
+                                <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Días
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Meses
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Años
+                                </label>
+                            </div>
                         </div>
 
-                        <input type="text" class="form-control" placeholder="Edad ej:31">
+                        <input type="text" class="form-control border-dark" placeholder="Edad ej:31">
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary bg-gradient" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success bg-gradient">Guardar</button>
+                        <button type="button" class="btn btn-secondary bg-gradient border-dark"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success bg-gradient border-dark">Guardar</button>
                     </div>
                 </div>
             </div>

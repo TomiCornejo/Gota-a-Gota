@@ -38,13 +38,18 @@ section #tablaSeguimiento tr td, section #tablaSeguimiento tr th {
 
 #agregarPlanta .dropdown {
   text-align: center;
-}
-#agregarPlanta .form-check {
   margin-top: 1%;
-  flex: left;
+}
+#agregarPlanta #containerEdad {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
+#agregarPlanta #containerEdad .form-check {
+  margin-right: 5%;
 }
 #agregarPlanta .form-control {
-  margin-top: 2%;
+  margin-top: 2.5%;
 }
 
 .form-check-input:checked {
