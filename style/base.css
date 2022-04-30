@@ -1,9 +1,9 @@
 /* mueve las opciones del navbar a la izquierda*/
-ul {
+#navbar {
   float: left;
 }
-ul li {
+
+#navbar li {
   margin: 0px 15px 0px 15px;
 }
-
 /*# sourceMappingURL=base.css.map */
