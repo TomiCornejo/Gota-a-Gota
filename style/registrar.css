@@ -26,7 +26,7 @@ section {
           justify-content: center;
 }
 
-section #ingresar {
+section #registrar {
   padding-top: 3%;
   padding-bottom: 3%;
   width: 100%;
@@ -56,4 +56,4 @@ footer #copy {
   float: right;
   margin-right: 50px;
 }
-/*# sourceMappingURL=ingresar.css.map */
+/*# sourceMappingURL=registrar.css.map */
