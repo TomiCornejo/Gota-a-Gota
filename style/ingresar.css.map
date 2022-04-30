@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["ingresar.sass"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;;AACA;EACI","file":"ingresar.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,qBAAqB,EAAE,KAAK;EAC5B,eAAe,EAAE,KAAK;EACtB,WAAW,EAAE,2CAA2C;EACxD,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CAAG;;AAEhB,AAAA,OAAO,CAAC;EACJ,MAAM,EAAE,EAAE;CAES;;AAHvB,AAEI,OAFG,CAEH,SAAS,CAAC;EACN,MAAM,EAAE,EAAE;CAAG",
+    "sources": [
+        "ingresar.sass"
+    ],
+    "names": [],
+    "file": "ingresar.css"
+}

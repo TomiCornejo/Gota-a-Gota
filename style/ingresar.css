@@ -1,9 +1,14 @@
 body {
   background-attachment: fixed;
   background-size: cover;
-  font-family: sans-serif, "Times New Roman", Times, serif;
+  font-family: sans-serif, 'Times New Roman', Times, serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -13,8 +18,8 @@ body {
 section {
   margin: 5%;
 }
+
 section #ingresar {
   margin: 5%;
 }
-
 /*# sourceMappingURL=ingresar.css.map */
