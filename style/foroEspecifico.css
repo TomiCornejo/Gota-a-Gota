@@ -1,0 +1,68 @@
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+nav ul {
+  float: left;
+}
+nav ul li {
+  margin: 0px 15px 0px 15px;
+}
+
+section #titulo {
+  margin-left: 1%;
+  margin-top: 1%;
+}
+section #post {
+  margin-left: 10%;
+  margin-top: 1%;
+  width: 100%;
+  max-width: 80%;
+}
+section #post img {
+  width: 45%;
+  margin-left: 25%;
+}
+section #comentario {
+  margin-top: 1%;
+  margin-left: 79%;
+}
+section .comentarios {
+  margin-left: 10%;
+  margin-top: 2%;
+  width: 100%;
+  max-width: 80%;
+}
+section .comentarios img {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 60%;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+footer {
+  padding: 1em 0;
+  margin-top: auto;
+}
+footer #sobreNosotros {
+  float: left;
+  margin-left: 50px;
+}
+footer #copy {
+  float: right;
+  margin-right: 50px;
+}
+
+/*# sourceMappingURL=foroEspecifico.css.map */
