@@ -1,34 +1,57 @@
-table, th, td { 
-    border: 5px solid rgba(86, 86, 250, 0.623);
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-table{
-    width: 100%;
-    max-width: 500px;
-    height: 350px;
-    float: right;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+nav ul {
+  float: left;
+}
+nav ul li {
+  margin: 0px 15px 0px 15px;
 }
 
-tr{
-    color: aliceblue;
-    font-size: 36px;
-    text-align: center;
+section {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+section #tarjetaPlanta {
+  margin-right: 15%;
+  width: 100%;
+  max-width: 450px;
+}
+section #tarjetaPlanta img {
+  width: 100%;
+}
+section #tablaInfo {
+  width: 100%;
+  max-width: 35%;
+}
+section #tablaInfo tr {
+  text-align: center;
+}
+section #tablaInfo tr td, section #tablaInfo tr th {
+  vertical-align: middle;
 }
 
-td,th{
-    vertical-align: middle;
+footer {
+  padding: 1em 0;
+  margin-top: auto;
+}
+footer #sobreNosotros {
+  float: left;
+  margin-left: 50px;
+}
+footer #copy {
+  float: right;
+  margin-right: 50px;
 }
 
-/* #planta{
-    width: 100%;
-    max-width: 450px;
-    height: 300px;
-    padding: 25px;
-    border-radius: 5%;
-}
-
-#planta,table{
-    margin: 5% 5% 5% 5%;
-    background-color: #4f3e8c;
-} */
+/*# sourceMappingURL=info.css.map */
