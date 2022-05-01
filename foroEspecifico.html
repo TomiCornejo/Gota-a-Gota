@@ -78,7 +78,8 @@
 
     <section>
         <h1 id="titulo">Titulo foro<span class="badge bg-success">@usuario</span></h1>
-        <div id="post" class="card mb-3">
+
+        <div id="post" class="card mb-3 border-dark bg-success text-white">
             <img src="img/manzana.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?</p>
@@ -86,7 +87,7 @@
         </div>
 
         <!-- Button trigger modal -->
-        <button id="comentario" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button id="comentario" type="button" class="btn btn-success bg-gradient border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Comentar ✉
         </button>
 
@@ -113,14 +114,16 @@
             </div>
         </div>
 
-        <div class="card mb-3 comentarios" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
+        <hr>
+
+        <div class="card comentarios border-dark bg-success text-white">
+            <div class="row">
+                <div class="col-md-2">
                     <img src="img/logoGota.png" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="comentarioPost card-body">
-                        <h5 class="card-title">@Gotita</h5>
+                        <h5 class="card-title"><b>@Gotita</b></h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?</p>
                     </div>
                 </div>

@@ -1,3 +1,6 @@
+section {
+  margin-bottom: 2%;
+}
 section #titulo {
   margin-left: 1%;
   margin-top: 1%;
@@ -11,6 +14,7 @@ section #post {
 section #post img {
   width: 45%;
   margin-left: 25%;
+  margin-top: 1%;
 }
 section #comentario {
   margin-top: 1%;
@@ -18,14 +22,9 @@ section #comentario {
 }
 section .comentarios {
   margin-left: 10%;
-  margin-top: 2%;
+  margin-top: 1%;
   width: 100%;
   max-width: 80%;
-}
-section .comentarios img {
-  border-radius: 100%;
-  width: 100%;
-  max-width: 60%;
 }
 
 textarea {
