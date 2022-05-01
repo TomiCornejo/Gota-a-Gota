@@ -3,6 +3,7 @@ section #botonPlanta {
   float: right;
   margin-right: 1%;
 }
+
 section #tablaSeguimiento {
   margin-right: 1%;
   margin-left: 1%;
@@ -10,9 +11,11 @@ section #tablaSeguimiento {
   width: 100%;
   max-width: 98%;
 }
+
 section #tablaSeguimiento tr {
   text-align: center;
 }
+
 section #tablaSeguimiento tr td, section #tablaSeguimiento tr th {
   vertical-align: middle;
 }
@@ -21,16 +24,22 @@ section #tablaSeguimiento tr td, section #tablaSeguimiento tr th {
   text-align: center;
   margin-top: 1%;
 }
+
 #agregarPlanta #containerEdad {
   margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #agregarPlanta #containerEdad .form-check {
   margin-right: 5%;
 }
+
 #agregarPlanta .form-control {
   margin-top: 2.5%;
 }
-
 /*# sourceMappingURL=seguimiento.css.map */

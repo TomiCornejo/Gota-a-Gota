@@ -1,26 +1,34 @@
 section {
   margin-top: 3%;
   margin-bottom: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 section #tarjetaPlanta {
   margin-right: 15%;
   width: 100%;
   max-width: 450px;
 }
+
 section #tarjetaPlanta img {
   width: 100%;
 }
+
 section #tablaInfo {
   width: 100%;
   max-width: 35%;
 }
+
 section #tablaInfo tr {
   text-align: center;
 }
+
 section #tablaInfo tr td, section #tablaInfo tr th {
   vertical-align: middle;
 }
-
 /*# sourceMappingURL=info.css.map */
