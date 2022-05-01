@@ -1,59 +1,21 @@
-body {
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: sans-serif, "Times New Roman", Times, serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 section {
   margin-top: 12.5%;
   margin-bottom: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 section #registrar {
   padding-top: 3%;
   padding-bottom: 3%;
   width: 100%;
 }
-
 section #usuario {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-
 section #clave {
   padding-top: 5%;
   padding-bottom: 10%;
 }
 
-footer {
-  padding: 1em 0;
-  margin-top: auto;
-}
-
-footer #sobreNosotros {
-  float: left;
-  margin-left: 50px;
-}
-
-footer #copy {
-  float: right;
-  margin-right: 50px;
-}
 /*# sourceMappingURL=registrar.css.map */
