@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["noticia.sass"],"names":[],"mappings":"AAAA;EACI;IACI;;;AAER;EACI;EACA","file":"noticia.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,SAAS,CAAC;IACN,MAAM,EAAE,KAAK;GAAG;;;AAExB,AAAA,OAAO,CAAC;EACJ,UAAU,EAAE,EAAE;EACd,aAAa,EAAE,EAAE;CAAG",
+    "sources": [
+        "noticia.sass"
+    ],
+    "names": [],
+    "file": "noticia.css"
+}
