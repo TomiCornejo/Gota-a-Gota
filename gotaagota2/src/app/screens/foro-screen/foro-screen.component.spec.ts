@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InfoRiegoComponent } from './info-riego.component';
+import { ForoScreenComponent } from './foro-screen.component';
 
-describe('InfoRiegoComponent', () => {
-  let component: InfoRiegoComponent;
-  let fixture: ComponentFixture<InfoRiegoComponent>;
+describe('ForoScreenComponent', () => {
+  let component: ForoScreenComponent;
+  let fixture: ComponentFixture<ForoScreenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfoRiegoComponent ]
+      declarations: [ ForoScreenComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InfoRiegoComponent);
+    fixture = TestBed.createComponent(ForoScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
