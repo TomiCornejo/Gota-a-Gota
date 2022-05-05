@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostComponent } from './post.component';
+import { SeguimientoScreensComponent } from './seguimiento-screens.component';
 
-describe('PostComponent', () => {
-  let component: PostComponent;
-  let fixture: ComponentFixture<PostComponent>;
+describe('SeguimientoScreensComponent', () => {
+  let component: SeguimientoScreensComponent;
+  let fixture: ComponentFixture<SeguimientoScreensComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
+      declarations: [ SeguimientoScreensComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostComponent);
+    fixture = TestBed.createComponent(SeguimientoScreensComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

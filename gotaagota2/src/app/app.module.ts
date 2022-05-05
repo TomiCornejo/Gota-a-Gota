@@ -17,6 +17,11 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { TarjetaPlantaComponent } from './components/tarjeta-planta/tarjeta-planta.component';
 import { CheckAguaComponent } from './components/check-agua/check-agua.component';
 import { NoticiasComponent } from './screens/noticias/noticias.component';
+import { AgregarPlantaComponent } from './components/agregar-planta/agregar-planta.component';
+import { SeguimientoScreensComponent } from './screens/seguimiento-screens/seguimiento-screens.component';
+import { RegistrarseScreensComponent } from './screens/registrarse-screens/registrarse-screens.component';
+import { PostScreensComponent } from './screens/post-screens/post-screens.component';
+import { PlantaScreensComponent } from './screens/planta-screens/planta-screens.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { NoticiasComponent } from './screens/noticias/noticias.component';
     CarruselComponent,
     TarjetaPlantaComponent,
     CheckAguaComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    AgregarPlantaComponent,
+    SeguimientoScreensComponent,
+    RegistrarseScreensComponent,
+    PostScreensComponent,
+    PlantaScreensComponent
   ],
   imports: [
     BrowserModule,
