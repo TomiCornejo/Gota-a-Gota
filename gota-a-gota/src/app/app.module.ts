@@ -20,6 +20,16 @@ import { CheckAguaComponent } from './components/check-agua/check-agua.component
 import { AgregarPlantaComponent } from './components/agregar-planta/agregar-planta.component';
 import { TablaSeguimientoComponent } from './components/tabla-seguimiento/tabla-seguimiento.component';
 import { NoticiaComponent } from './components/noticia/noticia.component';
+import { BotonPostComponent } from './components/boton-post/boton-post.component';
+import { MiniPostComponent } from './components/mini-post/mini-post.component';
+import { TituloPostComponent } from './components/titulo-post/titulo-post.component';
+import { PostComponent } from './components/post/post.component';
+import { BotonComentarioComponent } from './components/boton-comentario/boton-comentario.component';
+import { ComentarioPostComponent } from './components/comentario-post/comentario-post.component';
+import { IngresarComponent } from './components/ingresar/ingresar.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { ImagenPlantaComponent } from './components/imagen-planta/imagen-planta.component';
+import { TablaRiegoComponent } from './components/tabla-riego/tabla-riego.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +50,17 @@ import { NoticiaComponent } from './components/noticia/noticia.component';
     CheckAguaComponent,
     AgregarPlantaComponent,
     TablaSeguimientoComponent,
-    NoticiaComponent
+    NoticiaComponent,
+    BotonPostComponent,
+    MiniPostComponent,
+    TituloPostComponent,
+    PostComponent,
+    BotonComentarioComponent,
+    ComentarioPostComponent,
+    IngresarComponent,
+    RegistrarseComponent,
+    ImagenPlantaComponent,
+    TablaRiegoComponent
   ],
   imports: [
     BrowserModule,
