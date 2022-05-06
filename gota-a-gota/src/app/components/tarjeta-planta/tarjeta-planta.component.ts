@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Planta } from 'src/app/models/planta.model';
 
 @Component({
   selector: 'app-tarjeta-planta',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarjeta-planta.component.sass']
 })
 export class TarjetaPlantaComponent implements OnInit {
+
+  @Input() fruta:Planta;
 
   constructor() { }
 

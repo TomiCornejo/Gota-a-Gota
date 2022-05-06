@@ -1,6 +1,6 @@
 <div id="centro">    
     <section>
-        <app-tarjeta-planta></app-tarjeta-planta>
+        <app-tarjeta-planta *ngFor="let fruta of frutas" [fruta]="fruta"></app-tarjeta-planta>
     </section>
     
     <aside>
