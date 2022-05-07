@@ -1,21 +1,48 @@
 <div class="card text-center border-dark">
-    <div class="card-header bg-success bg-gradient text-white border-dark">
-      Cantidad de agua
-    </div>
-    <div class="card-body bg-success border-dark">
-        <ul class="list-group bg-success border-dark">
-            <li class="list-group-item bg-success bg-gradient text-white border-dark">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Poca agua
-            </li>
-            <li class="list-group-item bg-success bg-gradient text-white border-dark">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Media agua
-            </li>
-            <li class="list-group-item bg-success bg-gradient text-white border-dark">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Mucha agua
-            </li>
-          </ul>
-    </div>
+  <!-- Botones de tipo de planta -->
+  <div class="card-header bg-success bg-gradient text-white border-dark">
+    Filtros
+  </div>
+  <div class="card-body bg-success border-dark text-white">
+    <h6>Hacer seguimiento</h6>
+    <a [routerLink]="['/seguimiento-screen']" class="btn btn-primary bg-success bg-gradient border-dark">Seguimiento</a>
+    <hr>
+
+    <h6>Tipo de planta</h6>
+    <ul class="list-group bg-success border-dark">
+      <li class="list-group-item bg-success bg-gradient text-white border-dark">
+        <div class="form-check">
+          <input class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+            checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Fruta
+          </label>
+        </div>
+      </li>
+      <li class="list-group-item bg-success bg-gradient text-white border-dark">
+        <div class="form-check">
+          <input class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Verdura
+          </label>
+        </div>
+      </li>
+    </ul>
+    <hr>
+    <h6>Cantidad de agua</h6>
+    <ul class="list-group bg-success border-dark">
+      <li class="list-group-item bg-success bg-gradient text-white border-dark">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+        Poca agua
+      </li>
+      <li class="list-group-item bg-success bg-gradient text-white border-dark">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+        Media agua
+      </li>
+      <li class="list-group-item bg-success bg-gradient text-white border-dark">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+        Mucha agua
+      </li>
+    </ul>
+  </div>
 </div>
