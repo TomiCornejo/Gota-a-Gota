@@ -12,8 +12,7 @@
     <ul class="list-group bg-success border-dark">
       <li class="list-group-item bg-success bg-gradient text-white border-dark">
         <div class="form-check">
-          <input class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-            checked>
+          <input (input)="esFruta(true)" class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
           <label class="form-check-label" for="flexRadioDefault2">
             Fruta
           </label>
@@ -21,7 +20,7 @@
       </li>
       <li class="list-group-item bg-success bg-gradient text-white border-dark">
         <div class="form-check">
-          <input class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <input (input)="esFruta(false)" class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
           <label class="form-check-label" for="flexRadioDefault1">
             Verdura
           </label>

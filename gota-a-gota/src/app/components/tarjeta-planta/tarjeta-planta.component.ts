@@ -8,7 +8,7 @@ import { Planta } from 'src/app/models/planta.model';
 })
 export class TarjetaPlantaComponent implements OnInit {
 
-  @Input() fruta:Planta;
+  @Input() planta:Planta;
 
   constructor() { }
 

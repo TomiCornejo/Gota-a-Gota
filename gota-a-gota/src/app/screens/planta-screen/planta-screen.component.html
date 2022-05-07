@@ -1,9 +1,13 @@
 <div id="centro">    
-    <section>
-        <app-tarjeta-planta *ngFor="let fruta of frutas" [fruta]="fruta"></app-tarjeta-planta>
+    <section *ngIf="esFruta; else verdura">
+        <app-tarjeta-planta *ngFor="let fruta of frutas" [planta]="fruta"></app-tarjeta-planta>
     </section>
-    
+    <ng-template #verdura>
+        <section>
+            <app-tarjeta-planta *ngFor="let verdura of verduras" [planta]="verdura"></app-tarjeta-planta>
+        </section>
+    </ng-template>
     <aside>
-        <app-check-agua></app-check-agua>
+        <app-check-agua (revisarEsFruta)="frutaOverdura($event)"></app-check-agua>
     </aside>
 </div>

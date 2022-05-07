@@ -1,11 +1,11 @@
 export class Planta{
     nombre:string;
-    fruta:boolean;
     imagen:string;
+    cantAgua:number;
 
-    constructor(nombre:string,fruta:boolean,imagen:string){
-        this.fruta = fruta;
-        this.imagen = imagen;
+    constructor(nombre:string,imagen:string,cantAgua:number){
         this.nombre = nombre;
+        this.imagen = imagen;
+        this.cantAgua = cantAgua;
     }
 }
