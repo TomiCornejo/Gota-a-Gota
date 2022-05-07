@@ -12,9 +12,9 @@ export class CheckAguaComponent implements OnInit {
   @Output() revisarMediaAgua = new EventEmitter<boolean>();
   @Output() revisarMuchaAgua = new EventEmitter<boolean>();
 
-  varPocaAgua:boolean = false;
-  varMediaAgua:boolean = false;
-  varMuchaAgua:boolean = false;
+  varPocaAgua:boolean = true;
+  varMediaAgua:boolean = true;
+  varMuchaAgua:boolean = true;
 
   constructor() { }
 

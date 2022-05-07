@@ -8,6 +8,7 @@ import { Planta } from 'src/app/models/planta.model';
 })
 export class PlantaScreenComponent implements OnInit {
   esFruta:boolean = true;
+  check:number[] = [1,2,3];
 
   frutas:Planta[] = [
     new Planta("Manzana","../../../assets/manzana.jpg",1),
@@ -28,5 +29,29 @@ export class PlantaScreenComponent implements OnInit {
 
   frutaOverdura(value:boolean){
     this.esFruta = value;
+  }
+
+  pocaAgua(value:boolean){
+    if(value){
+      this.check[0] = 1;
+    }else{
+      this.check[0] = -1;
+    }
+  }
+
+  mediaAgua(value:boolean){
+    if(value){
+      this.check[1] = 2;
+    }else{
+      this.check[1] = -1;
+    }
+  }
+
+  muchaAgua(value:boolean){
+    if(value){
+      this.check[2] = 3;
+    }else{
+      this.check[2] = -1;
+    }
   }
 }
