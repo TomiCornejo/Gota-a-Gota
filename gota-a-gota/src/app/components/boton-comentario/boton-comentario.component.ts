@@ -18,6 +18,7 @@ export class BotonComentarioComponent implements OnInit {
 
   enviarComentario(){
     this.mandarComentario.emit(this.comentario);
+    this.cancelar();
   }
 
   cancelar(){
