@@ -20,6 +20,7 @@ export class RegistrarseComponent implements OnInit {
   registrarUsuarios(){
     if(this.nombre!='' && this.clave!=''){
       this.usuarios.push(new Usuario(this.nombre,this.clave));
+      this.nombre = this.clave = ''
       this.registrarUsuario.emit(this.usuarios);
     }else{
       alert('ingrese todos los datos');

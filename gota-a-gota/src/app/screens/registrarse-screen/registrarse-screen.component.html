@@ -1,7 +1,7 @@
 <section>
     <app-registrarse (registrarUsuario)="recibirUsuario($event)"></app-registrarse>
-    <ul>
-        <li *ngFor="let usuario of usuarios">{{usuario.nombre}} {{usuario.clave}}</li>
-    </ul>
 </section>
+<ul>
+    <li class="text-white bg-success" *ngFor="let usuario of usuarios; let i=index">{{i+1}} Usuario: {{usuario.nombre}} Clave: {{usuario.clave}}</li>
+</ul>
 

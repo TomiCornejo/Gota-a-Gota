@@ -14,9 +14,10 @@ export class IngresarComponent implements OnInit {
 
   ingresarUsuario(){
     if(this.nombre!='' && this.clave!=''){
-      alert('ingreso exitoso')
+      alert('ingreso exitoso');
+      this.nombre = this.clave = '';
     }else{
-      alert('ingrese todos los datos')
+      alert('ingrese todos los datos');
     }
   }
 
