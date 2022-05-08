@@ -1,7 +1,6 @@
 <!-- Button trigger modal -->
-<button id="botonPlanta" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal"
-data-bs-target="#exampleModal">
-Agregar planta🌱
+<button id="botonPlanta" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Agregar planta🌱
 </button>
 
 <!-- Modal -->
@@ -18,47 +17,42 @@ Agregar planta🌱
                 <!-- nombre y color del boton-->
                 <button class="btn btn-success dropdown-toggle bg-gradient border-dark" type="button"
                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Planta
+                    {{plantaSelecionada}}
                 </button>
                 <!-- controlar el background del dropdown-->
                 <ul class="dropdown-menu dropdown-menu-dark bg-success"
                     aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" >Zanahoria</a></li>
-                    <li><a class="dropdown-item" >Manzana</a></li>
+                    <li><a (click)="seleccionPlanta(planta)" *ngFor="let planta of plantas" class="dropdown-item" >{{planta}}</a></li>
                 </ul>
             </div>
 
             <div id="containerEdad">
                 <div class="form-check">
-                    <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
-                        id="flexRadioDefault1">
+                    <input (input)="seleccionTiempo(1)" class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                         Días
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
-                        id="flexRadioDefault2" checked>
+                    <input (input)="seleccionTiempo(2)" class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                     <label class="form-check-label" for="flexRadioDefault2">
                         Meses
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input border-dark" type="radio" name="flexRadioDefault"
-                        id="flexRadioDefault2" checked>
+                    <input (input)="seleccionTiempo(3)" class="form-check-input border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                     <label class="form-check-label" for="flexRadioDefault2">
                         Años
                     </label>
                 </div>
             </div>
 
-            <input type="text" class="form-control border-dark" placeholder="Edad ej:31">
+            <input [(ngModel)]="edad" type="number"  min="0" max="100" class="form-control border-dark">
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary bg-gradient border-dark"
-                data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-success bg-gradient border-dark">Guardar</button>
+            <button (click)="cancelar()" type="button" class="btn btn-secondary bg-gradient border-dark" data-bs-dismiss="modal">Cancelar</button>
+            <button *ngIf="flag" (click)="guardar()" type="button" class="btn btn-success bg-gradient border-dark" data-bs-dismiss="modal">Guardar</button>
         </div>
     </div>
 </div>
