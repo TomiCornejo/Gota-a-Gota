@@ -30,6 +30,7 @@ import { IngresarComponent } from './components/ingresar/ingresar.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { ImagenPlantaComponent } from './components/imagen-planta/imagen-planta.component';
 import { TablaRiegoComponent } from './components/tabla-riego/tabla-riego.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { TablaRiegoComponent } from './components/tabla-riego/tabla-riego.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

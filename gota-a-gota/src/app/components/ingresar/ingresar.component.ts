@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresar.component.sass']
 })
 export class IngresarComponent implements OnInit {
+  nombre:string='';
+  clave:string='';
 
-  constructor() { }
+  constructor() { 
+  }
+
+  ingresarUsuario(){
+    if(this.nombre!='' && this.clave!=''){
+      alert('ingreso exitoso')
+    }else{
+      alert('ingrese todos los datos')
+    }
+  }
+
 
   ngOnInit(): void {
   }
-
 }

@@ -4,17 +4,17 @@
 
         <!-- imput de Usuario -->
         <div id="usuario">
-            <input type="text" class="form-control" placeholder="Campo de texto">
+            <input type="text" class="form-control" placeholder="Campo de texto" [(ngModel)]="nombre">
             <p class="card-text">Usuario</p>
         </div>
 
         <!-- imput de contraseña -->
         <div id="clave">
-            <input type="password" class="form-control" placeholder="Campo de texto">
+            <input type="password" class="form-control" placeholder="Campo de texto" [(ngModel)]="clave">
             <p class="card-text">Contraseña</p>
         </div>
 
         <!-- Boton de aceptar -->
-        <button type="button" class="btn btn-success">Iniciar</button>
+        <button type="button" class="btn btn-success" (click)="ingresarUsuario()">Iniciar</button>
     </div>
 </div>
