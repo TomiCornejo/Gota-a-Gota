@@ -2,6 +2,9 @@
     <app-registrarse (registrarUsuario)="recibirUsuario($event)"></app-registrarse>
 </section>
 <div class="card text-center border-dark">
+    <div class="card-header bg-success bg-gradient text-white border-dark">
+        Lista de usuarios
+    </div>
     <div class="card-body bg-success border-dark text-white">
         <ul class="text-white">
             <li *ngFor="let usuario of usuarios; let i=index"><b>{{i+1}}</b> Usuario: {{usuario.nombre}} Clave: {{usuario.clave}} <br></li>
