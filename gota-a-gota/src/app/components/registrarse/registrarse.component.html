@@ -4,17 +4,17 @@
 
         <!-- imput de Usuario -->
         <div id="usuario">
-            <input type="text" class="form-control" placeholder="ej: usuarioCognito">
+            <input type="text" class="form-control" placeholder="ej: usuarioCognito" [(ngModel)]="nombre">
             <p class="card-text">Usuario</p>
         </div>
 
         <!-- imput de contraseña -->
         <div id="clave">
-            <input type="password" class="form-control" placeholder="ej: *123PassworD456*">
+            <input type="password" class="form-control" placeholder="ej: *123PassworD456*" [(ngModel)]="clave">
             <p class="card-text">Contraseña</p>
         </div>
 
         <!-- boton -->
-        <button type="button" class="btn btn-success">Registrar</button>
+        <button type="button" class="btn btn-success" (click)="registrarUsuarios()">Registrar</button>
     </div>
 </div>
