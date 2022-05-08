@@ -1,5 +1,5 @@
 <section>
-    <app-agregar-planta></app-agregar-planta>
+    <app-agregar-planta (mandarPlantaControl)="recibirPlanta($event)"></app-agregar-planta>
     <!-- Tabla -->
-    <app-tabla-seguimiento></app-tabla-seguimiento>
+    <app-tabla-seguimiento [plantas]="plantas"></app-tabla-seguimiento>
 </section>

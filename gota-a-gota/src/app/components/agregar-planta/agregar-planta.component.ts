@@ -39,7 +39,9 @@ export class AgregarPlantaComponent implements OnInit {
   }
 
   guardar(){
-    this.mandarPlantaControl.emit(new PlantaControl(this.plantaSelecionada,this.edad,this.tiempo));
+    this.edad *= this.tiempo;
+    this.mandarPlantaControl.emit(new PlantaControl(this.plantaSelecionada,this.edad));
+    this.cancelar();
   }
 
   cancelar(){
