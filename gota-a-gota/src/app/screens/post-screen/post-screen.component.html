@@ -3,10 +3,10 @@
 
     <app-post></app-post>
 
-    <app-boton-comentario></app-boton-comentario>
+    <app-boton-comentario (mandarComentario)="modalComentario($event)"></app-boton-comentario>
 
     <hr>
 
-    <app-comentario-post></app-comentario-post>
+    <app-comentario-post *ngFor="let comentario of comentarios" [comentario]="comentario"></app-comentario-post>
 
 </section>

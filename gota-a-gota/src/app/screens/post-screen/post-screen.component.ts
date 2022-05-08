@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostScreenComponent implements OnInit {
 
+  comentarios:string[] = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?",];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  modalComentario(comentario:string){
+    this.comentarios.push(comentario);
   }
 
 }

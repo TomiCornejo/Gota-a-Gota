@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comentario-post',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comentario-post.component.sass']
 })
 export class ComentarioPostComponent implements OnInit {
+
+  @Input() comentario:string;
 
   constructor() { }
 
