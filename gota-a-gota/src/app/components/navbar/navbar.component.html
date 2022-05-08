@@ -16,25 +16,12 @@
 
                 <!--boton de inicio-->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/inicio-screen']">Inicio</a>
                 </li>
-                
-                <!-- dropdown de los tipos de plantas y el seguimiento-->
+
+                <!--boton de planta-->
                 <li class="nav-item">
-                    <div class="dropdown">
-                        <!-- nombre y color del boton-->
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Plantas
-                        </button>
-                        <!-- controlar el background del dropdown-->
-                        <ul class="dropdown-menu dropdown-menu-dark bg-success "
-                            aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" [routerLink]="['/planta-screen']">Verdura</a></li>
-                            <li><a class="dropdown-item" [routerLink]="['/planta-screen']">Fruta</a></li>
-                            <li><a class="dropdown-item" [routerLink]="['/seguimiento-screen']">Seguimiento</a></li>
-                        </ul>
-                    </div>
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/planta-screen']">Plantas</a>
                 </li>
 
                 <!--boton de Noticias-->

@@ -1,3 +1,29 @@
-<button id="comentario" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Comentar ✉
+<button id="comentario" type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    Agregar post ✉
 </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content bg-success text-white border-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Publicar post</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div id="agregarComentario" class="modal-body">
+                <input (keyup)="camposLlenos()" [(ngModel)]="titulo" type="text" class="form-control" placeholder="Titulo">
+                <br>
+                <textarea (keyup)="camposLlenos()" [(ngModel)]="descripcion" class="form-control" aria-label="With textarea" placeholder="Descripción"></textarea>
+                <!-- <br> -->
+                <!-- <input type="file" class="form-control bg-success bg-gradient border-dark text-white" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"> -->
+            </div>
+
+            <div class="modal-footer">
+                <button (click)="cancelar()" type="button" class="btn btn-secondary bg-gradient border-dark" data-bs-dismiss="modal">Cancelar</button>
+                <button *ngIf="flag" (click)="publicar()" id="botonPublicar" type="button" class="btn btn-success bg-gradient border-dark" data-bs-dismiss="modal">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
