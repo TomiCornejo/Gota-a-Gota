@@ -7,6 +7,6 @@
 
     <hr>
 
-    <app-comentario-post *ngFor="let comentario of comentarios" [comentario]="comentario"></app-comentario-post>
+    <app-comentario-post (eliminarComentario)="eliminar($event)" *ngFor="let comentario of comentarios; let i=index" [comentario]="comentario" [pos]="i"></app-comentario-post>
 
 </section>

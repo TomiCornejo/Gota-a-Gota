@@ -3,11 +3,19 @@
         <div class="col-md-1">
             <img src="../../../assets/logoGota.png" class="img-fluid rounded-start" height="60px" width="60px" alt="...">
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <div class="comentarioPost card-body">
                 <h5 class="card-title"><b>@Gotita</b></h5>
                 <p class="card-text">{{comentario}}</p>
             </div>
+        </div>
+        <div class="col-md-1">
+            <br>
+            <button type="button" class="btn btn-success bg-gradient border-dark">📝</button>
+        </div>
+        <div class="col-md-1">
+            <br>
+            <button (click)="eliminar(pos)" type="button" class="btn btn-success bg-gradient border-dark">❌</button>
         </div>
     </div>
 </div>

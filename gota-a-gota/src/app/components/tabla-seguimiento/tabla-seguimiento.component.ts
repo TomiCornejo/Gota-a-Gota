@@ -9,9 +9,14 @@ import { PlantaControl } from 'src/app/models/plantaControl.model';
 export class TablaSeguimientoComponent implements OnInit {
 
   @Input() plantas:PlantaControl[];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  eliminar(pos:number){
+    this.plantas.splice(pos,1);
   }
 
 }

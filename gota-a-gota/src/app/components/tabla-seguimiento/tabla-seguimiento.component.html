@@ -7,6 +7,7 @@
             <th scope="col"><b>Edad (Días)</b></th>
             <th scope="col"><b>Riego/Día (Litros)</b></th>
             <th scope="col"><b>Cambio de etapa (Días)</b></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <!-- plantas que agregue el usuario-->
@@ -17,6 +18,9 @@
             <td>{{planta.edad}}</td>
             <td>0.12</td>
             <td>31</td>
+            <td>
+                <button (click)="eliminar(i)" type="button" class="btn btn-success bg-gradient border-dark">❌</button>
+            </td>
         </tr>
     </tbody>
 </table>

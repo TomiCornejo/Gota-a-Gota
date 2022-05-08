@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-comentario-post',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ComentarioPostComponent implements OnInit {
 
   @Input() comentario:string;
+  @Input() pos:number;
+  @Output() eliminarComentario = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  eliminar(pos:number){
+    this.eliminarComentario.emit(pos);
+  }
 }

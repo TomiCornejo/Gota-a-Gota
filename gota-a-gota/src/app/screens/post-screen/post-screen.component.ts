@@ -18,4 +18,8 @@ export class PostScreenComponent implements OnInit {
     this.comentarios.push(comentario);
   }
 
+  eliminar(pos:number){
+    this.comentarios.splice(pos,1);
+  }
+
 }
