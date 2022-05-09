@@ -10,13 +10,18 @@ export class ComentarioPostComponent implements OnInit {
   @Input() comentario:string;
   @Input() pos:number;
   @Output() eliminarComentario = new EventEmitter<number>();
+  @Output() editarComentario = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  eliminar(pos:number){
-    this.eliminarComentario.emit(pos);
+  eliminar(){
+    this.eliminarComentario.emit(this.pos);
+  }
+
+  editar(){
+    this.editarComentario.emit(this.pos);
   }
 }

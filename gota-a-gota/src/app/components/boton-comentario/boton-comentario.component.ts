@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton-comentario',
@@ -8,7 +8,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class BotonComentarioComponent implements OnInit {
 
   @Output() mandarComentario = new EventEmitter<string>();
-  comentario:string="";
+  @Output() editarModal = new EventEmitter<any>();
+  @Input() botonVerde:string = "Enviar";
+  @Input() n:number;
+  @Input() comentario:string="";
   flag:boolean = false;
 
   constructor() { }
@@ -17,8 +20,13 @@ export class BotonComentarioComponent implements OnInit {
   }
 
   enviarComentario(){
-    this.mandarComentario.emit(this.comentario);
-    this.cancelar();
+    if(this.botonVerde == "Enviar"){
+      this.mandarComentario.emit(this.comentario);
+      this.cancelar();
+    }else{
+      this.editarModal.emit([this.n,this.comentario]);
+      this.cancelar();
+    }
   }
 
   cancelar(){

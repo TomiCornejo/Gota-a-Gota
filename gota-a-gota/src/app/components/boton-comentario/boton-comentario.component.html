@@ -18,7 +18,7 @@
 
             <div class="modal-footer">
                 <button (click)="cancelar()" type="button" class="btn btn-secondary bg-gradient border-dark" data-bs-dismiss="modal">Cancelar</button>
-                <button *ngIf="flag" (click)="enviarComentario()" type="button" class="btn btn-success bg-gradient border-dark" data-bs-dismiss="modal">Enviar</button>
+                <button *ngIf="flag" (click)="enviarComentario()" type="button" class="btn btn-success bg-gradient border-dark" data-bs-dismiss="modal">{{botonVerde}}</button>
             </div>
         </div>
     </div>

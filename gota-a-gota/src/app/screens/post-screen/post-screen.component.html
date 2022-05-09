@@ -3,10 +3,10 @@
 
     <app-post></app-post>
 
-    <app-boton-comentario (mandarComentario)="modalComentario($event)"></app-boton-comentario>
+    <app-boton-comentario (editarModal)="editarArray($event)" [comentario]="editado" [n]="n" [botonVerde]="botonVerde" (mandarComentario)="modalComentario($event)"></app-boton-comentario>
 
     <hr>
 
-    <app-comentario-post (eliminarComentario)="eliminar($event)" *ngFor="let comentario of comentarios; let i=index" [comentario]="comentario" [pos]="i"></app-comentario-post>
+    <app-comentario-post (editarComentario)="editar($event)" (eliminarComentario)="eliminar($event)" *ngFor="let comentario of comentarios; let i=index" [comentario]="comentario" [pos]="i"></app-comentario-post>
 
 </section>

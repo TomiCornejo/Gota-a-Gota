@@ -11,11 +11,11 @@
         </div>
         <div class="col-md-1">
             <br>
-            <button type="button" class="btn btn-success bg-gradient border-dark">📝</button>
+            <button (click)="editar()" type="button" class="btn btn-success bg-gradient border-dark"  data-bs-toggle="modal" data-bs-target="#exampleModal">📝</button>
         </div>
         <div class="col-md-1">
             <br>
-            <button (click)="eliminar(pos)" type="button" class="btn btn-success bg-gradient border-dark">❌</button>
+            <button (click)="eliminar()" type="button" class="btn btn-success bg-gradient border-dark">❌</button>
         </div>
     </div>
 </div>
