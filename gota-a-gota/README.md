@@ -12,6 +12,10 @@ Ventana Plantas
     Tipo de planta: Permite filtrar que planta se mostraran entre frutas o plantas 
     Cantidad de agua: Permite seleccionar multiples opciones entre la cantidad de agua que la planta ocupa
 
+Ventana Seguimiento
+    Agregar planta:el usuario selecciona edad de la planta y la planta a seguir y se le entra informacion de riego de la planta
+    Permite al usuario eliminar un seguimiento de sus propias plantas
+    
 Ventana Noticias
     El usuario puede seleccionar una noticia relacionada a plantas por si desea consultar mas informacion
 

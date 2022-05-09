@@ -10,7 +10,7 @@ export class PostScreenComponent implements OnInit {
   comentarios:string[] = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?",];
   editado:string = "";
   n:number;
-  botonVerde:string;
+  botonVerde:string = "Enviar";
 
   constructor() { }
 
