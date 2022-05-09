@@ -27,6 +27,7 @@ export class BotonComentarioComponent implements OnInit {
       this.editarModal.emit([this.n,this.comentario]);
       this.cancelar();
     }
+    this.flag = false;
   }
 
   cancelar(){
