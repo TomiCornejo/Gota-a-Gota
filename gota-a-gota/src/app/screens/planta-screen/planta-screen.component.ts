@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Planta } from 'src/app/models/planta.model';
 import listaFrutas from 'src/assets/json/fruta.json';
+import listaVerduras from '../../../assets/json/verdura.json';
 
 @Component({
   selector: 'app-planta-screen',
@@ -13,11 +14,7 @@ export class PlantaScreenComponent implements OnInit {
 
   frutas:Planta[] = listaFrutas;
 
-  verduras:Planta[] = [
-    new Planta("Lechuga","../../../assets/lechugas.jpg",1),
-    new Planta("Tomate","../../../assets/tomate.jpg",2),
-    new Planta("Zanahoria","../../../assets/zanahorias.jpg",3),
-  ];
+  verduras:Planta[] = listaVerduras;
 
   constructor() { }
 

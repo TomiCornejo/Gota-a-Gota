@@ -1,0 +1,43 @@
+[{
+    "nombre":"Lechuga",
+    "imagen":"../../../assets/lechugas.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Tomate",
+    "imagen":"../../../assets/tomate.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Zanahoria",
+    "imagen":"../../../assets/zanahorias.jpg",
+    "cantAgua":3
+},{
+    "nombre":"Lechuga",
+    "imagen":"../../../assets/lechugas.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Tomate",
+    "imagen":"../../../assets/tomate.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Zanahoria",
+    "imagen":"../../../assets/zanahorias.jpg",
+    "cantAgua":3
+},{
+    "nombre":"Lechuga",
+    "imagen":"../../../assets/lechugas.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Tomate",
+    "imagen":"../../../assets/tomate.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Zanahoria",
+    "imagen":"../../../assets/zanahorias.jpg",
+    "cantAgua":3
+}]
