@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import listaComentarios from 'src/assets/json/comentario.json';
 
 @Component({
   selector: 'app-post-screen',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostScreenComponent implements OnInit {
 
-  comentarios:string[] = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nostrum?",];
+  comentarios:string[] = listaComentarios;
   editado:string = "";
   n:number;
   botonVerde:string = "Enviar";
