@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Planta } from 'src/app/models/planta.model';
+import listaFrutas from 'src/assets/json/fruta.json';
 
 @Component({
   selector: 'app-planta-screen',
@@ -10,11 +11,7 @@ export class PlantaScreenComponent implements OnInit {
   esFruta:boolean = true;
   check:number[] = [1,2,3];
 
-  frutas:Planta[] = [
-    new Planta("Manzana","../../../assets/manzana.jpg",1),
-    new Planta("Pera","../../../assets/peras.jpg",2),
-    new Planta("Platano","../../../assets/platanos.jpg",3),
-  ];
+  frutas:Planta[] = listaFrutas;
 
   verduras:Planta[] = [
     new Planta("Lechuga","../../../assets/lechugas.jpg",1),

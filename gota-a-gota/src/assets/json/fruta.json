@@ -1,0 +1,57 @@
+[{
+    "nombre":"Manzana",
+    "imagen":"../../../assets/manzana.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Pera",
+    "imagen":"../../../assets/peras.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Platano",
+    "imagen":"../../../assets/platanos.jpg",
+    "cantAgua":3
+},{
+    "nombre":"Manzana",
+    "imagen":"../../../assets/manzana.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Pera",
+    "imagen":"../../../assets/peras.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Platano",
+    "imagen":"../../../assets/platanos.jpg",
+    "cantAgua":3
+},{
+    "nombre":"Manzana",
+    "imagen":"../../../assets/manzana.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Pera",
+    "imagen":"../../../assets/peras.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Platano",
+    "imagen":"../../../assets/platanos.jpg",
+    "cantAgua":3
+},{
+    "nombre":"Manzana",
+    "imagen":"../../../assets/manzana.jpg",
+    "cantAgua":1
+},
+{
+    "nombre":"Pera",
+    "imagen":"../../../assets/peras.jpg",
+    "cantAgua":2
+},
+{
+    "nombre":"Platano",
+    "imagen":"../../../assets/platanos.jpg",
+    "cantAgua":3
+}]
