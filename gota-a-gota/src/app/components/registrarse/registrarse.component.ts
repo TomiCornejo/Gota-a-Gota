@@ -29,7 +29,7 @@ export class RegistrarseComponent implements OnInit {
     }else{
       this.usuarioService.post(this.nombre,this.clave1,this.img).subscribe(data =>{
         console.log(data);
-        sessionStorage.setItem('sitiomovil',JSON.stringify({"usuario":this.nombre,"icono":this.img,"admin":false}));
+        sessionStorage.setItem('sitiomovil',JSON.stringify({"usuario":data.nombre,"icono":data.icono,"admin":false}));
         this.nombre = this.clave1 = this.clave2 = this.img = "";
         window.location.href="/inicio-screen";
       });

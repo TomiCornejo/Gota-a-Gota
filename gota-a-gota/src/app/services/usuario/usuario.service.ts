@@ -34,4 +34,9 @@ export class UsuarioService {
     }
     return this.http.put(url,value);
   }
+
+  delete(nombre:string,clave:string):Observable<any>{
+    let url = this.url + nombre + "/" + clave;
+    return this.http.delete(url);
+  }
 }

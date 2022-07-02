@@ -26,7 +26,7 @@ def usuario_api_view(request):
         usuario_serializer = UsuarioSerializer(data = request.data)
         if usuario_serializer.is_valid():
             usuario_serializer.save()
-            return Response({'message':'Usuario created'},status = status.HTTP_201_CREATED)
+            return Response(usuario_serializer.data,status = status.HTTP_201_CREATED)
         return Response(usuario_serializer.errors,status = status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET','PUT','DELETE'])

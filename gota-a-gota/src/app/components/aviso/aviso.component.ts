@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 
 @Component({
@@ -7,11 +7,8 @@ import { UsuarioService } from 'src/app/services/usuario/usuario.service';
   styleUrls: ['./aviso.component.sass']
 })
 export class AvisoComponent implements OnInit {
-
   clave:string;
   checkFlag:boolean = false;
-  @Output() verificar = new EventEmitter<boolean>();
-  @Input() edit:boolean;
 
   constructor(private usuarioService:UsuarioService) { }
 
@@ -35,17 +32,15 @@ export class AvisoComponent implements OnInit {
     let user = JSON.parse(sessionStorage.getItem('sitiomovil') || "[]");
     this.usuarioService.get(user.usuario,this.clave).subscribe(data=>{
       if(data){
-        if(this.edit){
-          this.cancel();
-          this.verificar.emit(true);
-        }
+        this.usuarioService.delete(user.usuario,this.clave).subscribe(data=>{
+          console.log(data);
+          sessionStorage.clear();
+          window.location.href="/inicio-screen";
+        });
       }else{
         alert("Contrseña incorrecta: Permiso denegado");
-        this.verificar.emit(false);
-        this.cancel();
-        sessionStorage.clear();
-        window.location.href="/inicio-screen";
       }
+      this.cancel();
     });
   }
 }
