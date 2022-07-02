@@ -1,18 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <!--BOTON DE LOGO-->
     <div class="container-fluid">
+
+        <!--hamburguesa lo puse primero para que se mantenga en la izquierda, data-bs-target comandar a que se debe colapsar-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <a class="navbar-brand" [routerLink]="['/inicio-screen']">
             <img src="../../../assets/logoGota.png" alt="" width="35" height="34" class="d-inline-block align-text-top">
             <b>Gota a Gota</b>
         </a>
-        <!--   hamburguesa          -->
-        <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>-->
 
-        <div class="" id="navbarColor01">
-            <ul class="navbar-nav mb-2 mb-lg-0 list-group-horizontal" id="navbar">
+        <!--el div con id opciones es para que el boton hamburguesa reconozca lo que debe colapsar-->
+        <div class="collapse navbar-collapse" id="opciones">
+            <ul class="navbar-nav mb-2 mb-lg-0" id="navbar">
 
                 <!--boton de inicio-->
                 <li class="nav-item">
@@ -49,6 +52,7 @@
                         <img src="http://127.0.0.1:8000{{icono}}" class="rounded-circle" style="width:35px;height:35px;">
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
