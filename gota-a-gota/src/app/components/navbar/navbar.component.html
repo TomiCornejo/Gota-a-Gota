@@ -35,13 +35,17 @@
                 </li>
                 
                 <!--boton de Ingreso-->
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="['/ingresar-screen']">Ingresar</a>
+                <li *ngIf="!flag" class="nav-item">
+                    <a *ngIf="!flag" class="nav-link active" [routerLink]="['/ingresar-screen']">Ingresar</a>
                 </li>
             
                 <!--boton de Registro-->
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="['/registrarse-screen']">Registrarse</a>
+                <li *ngIf="!flag" class="nav-item">
+                    <a *ngIf="!flag" class="nav-link active" [routerLink]="['/registrarse-screen']">Registrarse</a>
+                </li>
+
+                <li *ngIf="flag" class="nav-item">
+                    <a (click)="cerrarSesion()" *ngIf="flag" class="nav-link active" [routerLink]="['/ingresar-screen']">Cerrar sesión</a>
                 </li>
 
             </ul>

@@ -1,20 +1,31 @@
-<div id="registrar" class="card" style="width: 25rem;">
+<div class="card mt-3 mb-3" style="width: 25rem;">
     <div class="card-body">
         <h5 class="Registrar text-center">Registrarse</h5>
 
         <!-- imput de Usuario -->
-        <div id="usuario">
-            <input type="text" class="form-control" placeholder="ej: usuarioCognito" [(ngModel)]="nombre">
+        <div class="mt-3">
+            <input type="text" class="form-control" placeholder="ej: UsuarioCognito" [(ngModel)]="nombre">
             <p class="card-text">Usuario</p>
         </div>
 
         <!-- imput de contraseña -->
-        <div id="clave">
-            <input type="password" class="form-control" placeholder="ej: *123PassworD456*" [(ngModel)]="clave">
+        <div class="mt-3">
+            <input type="password" class="form-control" placeholder="ej: *123PassworD456*" [(ngModel)]="clave1">
             <p class="card-text">Contraseña</p>
         </div>
 
+        <div class="mt-3">
+            <input type="password" class="form-control" placeholder="ej: *123PassworD456*" [(ngModel)]="clave2">
+            <p class="card-text">Repite la contraseña</p>
+        </div>
+
+        <div class="mt-3">
+            <input (change)="captureFile($event)" class="form-control mt-3" type="file" accept=".jpg, .png, .jpeg">
+            <p class="card-text">Icono</p>
+            <img *ngIf="imgFlag" src="{{img}}" class="mt-3 w-25 h-25 rounded-circle mx-auto d-block">
+        </div>
+
         <!-- boton -->
-        <button type="button" class="btn btn-success" (click)="registrarUsuarios()">Registrar</button>
+        <button type="button" class="btn btn-success mt-3 mx-auto d-block" (click)="registrarUsuarios()">Registrar</button>
     </div>
 </div>

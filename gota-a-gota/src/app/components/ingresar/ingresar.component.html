@@ -3,18 +3,18 @@
         <h5 class="Ingresar text-center">Inicar sesión</h5>
 
         <!-- imput de Usuario -->
-        <div id="usuario">
+        <div class="mt-4">
             <input type="text" class="form-control" placeholder="Campo de texto" [(ngModel)]="nombre">
             <p class="card-text">Usuario</p>
         </div>
 
         <!-- imput de contraseña -->
-        <div id="clave">
+        <div class="mt-4">
             <input type="password" class="form-control" placeholder="Campo de texto" [(ngModel)]="clave">
             <p class="card-text">Contraseña</p>
         </div>
 
         <!-- Boton de aceptar -->
-        <button type="button" class="btn btn-success" (click)="ingresarUsuario()">Iniciar</button>
+        <button type="button" class="btn btn-success mt-5 mx-auto d-block" (click)="ingresarUsuario()">Iniciar</button>
     </div>
 </div>

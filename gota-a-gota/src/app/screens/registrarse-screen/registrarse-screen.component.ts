@@ -7,15 +7,12 @@ import { Usuario } from 'src/app/models/usuario.model';
   styleUrls: ['./registrarse-screen.component.sass']
 })
 export class RegistrarseScreenComponent implements OnInit {
-  usuarios:Usuario[];
-
   constructor() { }
 
   ngOnInit(): void {
+    let datos = sessionStorage.getItem('sitiomovil');
+    if(datos){
+      window.location.href="/inicio-screen";
+    }
   }
-
-  recibirUsuario(usuarios:Usuario[]){
-    this.usuarios = usuarios;
-  }
-
 }
