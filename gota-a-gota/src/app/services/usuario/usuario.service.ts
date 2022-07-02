@@ -19,4 +19,13 @@ export class UsuarioService {
     let value = {"nombre":nombre,"clave":clave,"icono":icono};
     return this.http.post(this.url,value);
   }
+
+  put(nombre:string,clave:string,admin:boolean,icono:string = ""):Observable<any>{
+    let url = this.url + nombre + "/" + clave;
+    if(icono == ""){
+      return this.http.put(url,[nombre,admin,clave]);
+    }else{
+      return this.http.put(url,[nombre,clave,admin,icono]);
+    }
+  }
 }

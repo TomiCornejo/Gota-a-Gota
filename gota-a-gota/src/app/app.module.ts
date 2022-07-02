@@ -33,6 +33,7 @@ import { TablaRiegoComponent } from './components/tabla-riego/tabla-riego.compon
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoUsuarioComponent } from './components/info-usuario/info-usuario.component';
+import { AvisoComponent } from './components/aviso/aviso.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { InfoUsuarioComponent } from './components/info-usuario/info-usuario.com
     RegistrarseComponent,
     ImagenPlantaComponent,
     TablaRiegoComponent,
-    InfoUsuarioComponent
+    InfoUsuarioComponent,
+    AvisoComponent
   ],
   imports: [
     BrowserModule,
