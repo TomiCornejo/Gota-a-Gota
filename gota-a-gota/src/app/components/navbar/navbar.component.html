@@ -45,9 +45,10 @@
                 </li>
 
                 <li *ngIf="flag" class="nav-item">
-                    <a (click)="cerrarSesion()" *ngIf="flag" class="nav-link active" [routerLink]="['/ingresar-screen']">Cerrar sesión</a>
+                    <a *ngIf="flag" href="#" class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img src="http://127.0.0.1:8000{{icono}}" class="rounded-circle" style="width:35px;height:35px;">
+                    </a>
                 </li>
-
             </ul>
         </div>
     </div>
