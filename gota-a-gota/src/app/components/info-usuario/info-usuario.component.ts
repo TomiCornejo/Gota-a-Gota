@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 
 @Component({
   selector: 'app-info-usuario',
@@ -18,9 +19,11 @@ export class InfoUsuarioComponent implements OnInit {
   icono2:string;
   usuario2:string;
   admin2:boolean;
-  type:string;
+  clave1:string;
+  clave2:string;
+  edit:boolean;
 
-  constructor(private sanitizer: DomSanitizer,) { }
+  constructor(private sanitizer: DomSanitizer,private usuarioService:UsuarioService) { }
 
   ngOnInit(): void {
     let datos = sessionStorage.getItem('sitiomovil');
@@ -35,16 +38,25 @@ export class InfoUsuarioComponent implements OnInit {
     }
   }
 
-  editarInfo(verificar:boolean){
-    if(verificar == true){
-      alert("FUNCIONA");
-    }else{
-      alert("FUNCIONAN'T");
+  editarInfo(){
+    if(this.icono2 == this.icono){
+      this.icono2 = "";
     }
+    this.usuarioService.put(this.usuario,this.clave1,this.usuario2,this.admin2,this.clave2,this.icono2).subscribe(data=>{
+      if(!data){
+        alert("Contrseña incorrecta: Permiso denegado");
+      }else{
+        sessionStorage.setItem('sitiomovil',JSON.stringify({"usuario":data.nombre,"icono":data.icono,"admin":data.admin}));
+        this.usuario = data.usuario;
+        this.admin = data.admin;
+        this.icono = "http://127.0.0.1:8000" + data.icono;
+      }
+    });
+    this.cambioEdit(false);
   }
 
-  cambioType(value:string){
-    this.type = value;
+  cambioType(value:boolean){
+    this.edit = value;
   }
 
   cambioEdit(value:boolean){
@@ -52,6 +64,7 @@ export class InfoUsuarioComponent implements OnInit {
     this.admin2 = this.admin;
     this.usuario2 = this.usuario;
     this.icono2 = this.icono;
+    this.clave2 = this.clave1 = "";
   }
 
   cambioAdmin(value:boolean){
@@ -64,7 +77,7 @@ export class InfoUsuarioComponent implements OnInit {
   }
 
   checkText(){
-    if(this.usuario2 == ""){
+    if(this.usuario2 == "" || this.clave1 == ""){
       this.sendflag = false;
     }else{
       this.sendflag = true;

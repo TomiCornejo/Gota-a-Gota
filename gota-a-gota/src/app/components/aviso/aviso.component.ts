@@ -11,7 +11,7 @@ export class AvisoComponent implements OnInit {
   clave:string;
   checkFlag:boolean = false;
   @Output() verificar = new EventEmitter<boolean>();
-  @Input() type:string;
+  @Input() edit:boolean;
 
   constructor(private usuarioService:UsuarioService) { }
 
@@ -32,12 +32,10 @@ export class AvisoComponent implements OnInit {
   }
 
   submit(){
-    alert("ENTRE");
     let user = JSON.parse(sessionStorage.getItem('sitiomovil') || "[]");
     this.usuarioService.get(user.usuario,this.clave).subscribe(data=>{
-      alert("O:");
       if(data){
-        if(this.type == "edit"){
+        if(this.edit){
           this.cancel();
           this.verificar.emit(true);
         }

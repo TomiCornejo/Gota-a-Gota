@@ -20,12 +20,18 @@ export class UsuarioService {
     return this.http.post(this.url,value);
   }
 
-  put(nombre:string,clave:string,admin:boolean,icono:string = ""):Observable<any>{
-    let url = this.url + nombre + "/" + clave;
-    if(icono == ""){
-      return this.http.put(url,[nombre,admin,clave]);
+  put(actualN:string,actualC:string,nombre:string,admin:boolean,clave:string = "",icono:string = ""):Observable<any>{
+    let url = this.url + actualN + "/" + actualC;
+    let value;
+    if(icono == "" && clave == ""){
+      value = {"nombre":nombre,"admin":admin,"clave":actualC};
+    }else if(icono == ""){
+      value = {"nombre":nombre,"admin":admin,"clave":clave};
+    }else if(clave == ""){
+      value = {"nombre":nombre,"admin":admin,"icono":icono,"clave":actualC};
     }else{
-      return this.http.put(url,[nombre,clave,admin,icono]);
+      value = {"nombre":nombre,"clave":clave,"admin":admin,"icono":icono};
     }
+    return this.http.put(url,value);
   }
 }
