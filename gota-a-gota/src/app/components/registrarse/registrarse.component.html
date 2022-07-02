@@ -24,8 +24,27 @@
             <p class="card-text">Icono</p>
             <img *ngIf="imgFlag" src="{{img}}" class="mt-3 w-25 h-25 rounded-circle mx-auto d-block">
         </div>
+        
+        <form [formGroup]="aFormGroup">
+            <ngx-recaptcha2 #captchaElem
+              [siteKey]="siteKey"
+              formControlName="recaptcha">
+            </ngx-recaptcha2>
+        </form>
 
         <!-- boton -->
-        <button type="button" class="btn btn-success mt-3 mx-auto d-block" (click)="registrarUsuarios()">Registrar</button>
+        <button type="button" class="btn btn-success mt-3 mx-auto d-block" (click)="registrarUsuarios()" id="liveToastBtn">Registrar</button>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Hello, world! This is a toast message.
+              </div>
+            </div>
+        </div>
+        
     </div>
 </div>

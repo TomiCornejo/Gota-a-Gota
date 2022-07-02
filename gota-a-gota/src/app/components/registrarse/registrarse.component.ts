@@ -1,7 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output} from '@angular/core';
+import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario/usuario.service';
+
 
 
 @Component({
@@ -16,11 +18,15 @@ export class RegistrarseComponent implements OnInit {
   img:string = '';
   imgFlag:boolean = false;
 
-  constructor(private sanitizer: DomSanitizer,private usuarioService:UsuarioService) { }
-
-  ngOnInit(): void {
+  constructor(private sanitizer: DomSanitizer,private usuarioService:UsuarioService,private formBuilder: FormBuilder) { }
+  public aFormGroup: FormGroup;
+  ngOnInit() {
+    this.aFormGroup = this.formBuilder.group({
+      recaptcha: ['', Validators.required]
+    });
   }
 
+  siteKey:string = "6LfXtrsgAAAAAGEuFkZtx7afZeCSuPswXj_JEjRB"
   registrarUsuarios(){
     if(this.nombre == '' || this.clave1 == '' || this.clave2 == '' || this.img == ''){
       alert('Ingrese todos los datos');
