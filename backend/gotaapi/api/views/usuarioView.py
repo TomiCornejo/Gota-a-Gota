@@ -12,11 +12,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model =Usuario
         fields = '__all__'
     
-class UsuarioDataSerializer(serializers.ModelSerializer):
-    icono = Base64ImageField(required=False)
-    class Meta:
-        model = Usuario
-        fields = ['nombre','admin','icono']
+# class UsuarioDataSerializer(serializers.ModelSerializer):
+#     icono = Base64ImageField(required=False)
+#     class Meta:
+#         model = Usuario
+#         fields = ['nombre','admin','icono']
 
 @api_view(['POST'])
 def usuario_api_view(request):
@@ -37,7 +37,7 @@ def usuario_detail_api_view(request,nombre=None,clave=None):
     if usuario:
         if(check_password_hash(usuario.clave,clave)):
             if request.method == 'GET':
-                usuario_serializer = UsuarioDataSerializer(usuario)
+                usuario_serializer = UsuarioSerializer(usuario)
                 return Response(usuario_serializer.data,status = status.HTTP_200_OK)
 
             elif request.method == 'PUT':
@@ -55,4 +55,15 @@ def usuario_detail_api_view(request,nombre=None,clave=None):
         else:
             return Response({'message':'Usuario dont have accces'},status = status.HTTP_204_NO_CONTENT)
 
+    return Response({'message':'Usuario not found'},status = status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+def usuario_id_api_view(request,pk=None):
+    
+    usuario = Usuario.objects.filter(id = pk).first()
+    if usuario:
+    
+        if request.method == 'GET':
+            usuario_serializer = UsuarioSerializer(usuario)
+            return Response(usuario_serializer.data,status = status.HTTP_200_OK)
     return Response({'message':'Usuario not found'},status = status.HTTP_204_NO_CONTENT)
