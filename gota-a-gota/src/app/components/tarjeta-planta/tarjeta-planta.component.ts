@@ -15,4 +15,8 @@ export class TarjetaPlantaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirec(){
+    localStorage.setItem('plantita',JSON.stringify({"nombre":this.planta.nombre,"informacion":this.planta.informacion,"fuente":this.planta.fuente,"img":this.planta.img}));
+  }
+
 }

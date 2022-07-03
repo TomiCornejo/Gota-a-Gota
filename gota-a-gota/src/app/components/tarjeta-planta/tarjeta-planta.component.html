@@ -1,7 +1,7 @@
 <div class="card bg-success border-dark" style="width: 18rem;">
-    <img src="{{planta.imagen}}" class="card-img-top" alt="">
+    <img src="http://127.0.0.1:8000{{planta.img}}" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title text-white">{{planta.nombre}}</h5>
-      <a [routerLink]="['/info-riego-screen']" class="btn btn-primary bg-success bg-gradient border-dark">Información de riego</a>
+      <a (click)="redirec()" [routerLink]="['/info-riego-screen']" class="btn btn-primary bg-success bg-gradient border-dark">Información de riego</a>
     </div>
 </div>

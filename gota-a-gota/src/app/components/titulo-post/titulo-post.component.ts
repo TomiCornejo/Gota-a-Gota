@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TituloPostComponent implements OnInit {
 
+  titulo:string;
+  usuario:string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.obtenerPost();
   }
 
+  obtenerPost(){
+    let post = JSON.parse(localStorage.getItem('post') || "[]");
+    this.titulo = post.titulo;
+    this.usuario = post.usuario;
+  }
 }

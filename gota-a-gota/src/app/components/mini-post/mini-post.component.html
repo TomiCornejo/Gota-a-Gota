@@ -2,13 +2,13 @@
     <div class="card bg-success border-dark">
         <div class="card-body text-white">
             <div class="g-5 d-flex">
-                <img class="col-md-1" height="60px" width="60px" src="../../../assets/lechugas.jpg" alt="">
+                <img class="col-md-1" height="60px" width="60px" src="http://127.0.0.1:8000{{foro.icono}}">
                 <div class="ps-3 col-md-10">
-                    <h5 id="titulo">{{miniPost.titulo}}<span class="badge bg-success">@usuario</span></h5>
-                    <p>{{miniPost.descripcion}}</p>
+                    <h5 id="titulo">{{foro.titulo}}<span class="badge bg-success">@{{foro.nick}}</span></h5>
+                    <p>{{acotado(foro.texto)}}...</p>
                 </div>
                 <div class="col-md-1 float-right">
-                    <a [routerLink]="['/post-screen']" class="btn btn-secondary">Ver</a>
+                    <a (click)="redirec()" [routerLink]="['/post-screen']" class="btn btn-secondary">Ver</a>
                 </div>
             </div>
         </div>

@@ -1,22 +1,18 @@
-<div id="centro">    
-    <section *ngIf="esFruta; else verdura">
-        <span *ngFor="let fruta of frutas" >
-            <span *ngIf="fruta.cantAgua == check[0] || fruta.cantAgua == check[1] || fruta.cantAgua == check[2]">
-                <app-tarjeta-planta [planta]="fruta"></app-tarjeta-planta>
-            </span>
-        </span>
-    </section>
-    <ng-template #verdura>
-        <section>
-            <span *ngFor="let verdura of verduras">
-                <span *ngIf="verdura.cantAgua == check[0] || verdura.cantAgua == check[1] || verdura.cantAgua == check[2]">
-                    <app-tarjeta-planta [planta]="verdura"></app-tarjeta-planta>
+<div id="centro" class="container align-items-center justify-content-center">    
+    <div class="row">
+        <div class="col-9 d-flex align-content-start flex-wrap">
+            <section class="me-1 m-3" *ngFor="let planta of plantas">
+                <span *ngIf="planta.categoria == poca || planta.categoria == media || planta.categoria == mucha">
+                    <span *ngIf="tipo == planta.tipo">
+                        <app-tarjeta-planta  [planta]="planta"></app-tarjeta-planta>
+                    </span>
                 </span>
-            </span>
-        </section>
-    </ng-template>
-
-    <aside>
-        <app-check-agua (revisarEsFruta)="frutaOverdura($event)" (revisarPocaAgua)="pocaAgua($event)" (revisarMediaAgua)="mediaAgua($event)" (revisarMuchaAgua)="muchaAgua($event)"></app-check-agua>
-    </aside>
+            </section>
+        </div>
+        <div class="col-3 mt-3 w-20">
+            <aside>
+                <app-check-agua (revisarEsFruta)="revisarEsFruta($event)" (revisarMediaAgua)="revisarMediaAgua($event)" (revisarPocaAgua)="revisarPocaAgua($event)" (revisarMuchaAgua)="revisarMuchaAgua($event)"></app-check-agua>
+            </aside>
+        </div>
+    </div>
 </div>

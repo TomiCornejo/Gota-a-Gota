@@ -13,9 +13,17 @@ export class PostScreenComponent implements OnInit {
   n:number;
   botonVerde:string = "Enviar";
 
+  id:number;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.obtenerPost();
+  }
+
+  obtenerPost(){
+    let post = JSON.parse(localStorage.getItem('post') || "[]");
+    this.id =post.id;
   }
 
   modalComentario(comentario:string){

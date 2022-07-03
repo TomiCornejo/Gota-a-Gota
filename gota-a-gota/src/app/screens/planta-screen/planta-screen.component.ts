@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Planta } from 'src/app/models/planta.model';
-import listaFrutas from 'src/assets/json/fruta.json';
-import listaVerduras from '../../../assets/json/verdura.json';
+import { PlantaService } from 'src/app/services/planta/planta.service';
 
 @Component({
   selector: 'app-planta-screen',
@@ -9,43 +8,55 @@ import listaVerduras from '../../../assets/json/verdura.json';
   styleUrls: ['./planta-screen.component.sass']
 })
 export class PlantaScreenComponent implements OnInit {
-  esFruta:boolean = true;
-  check:number[] = [1,2,3];
+  
+  plantas:Planta[];
+  tipo:string = "Fruta";
+  poca:string;
+  media:string;
+  mucha:string;
 
-  frutas:Planta[] = listaFrutas;
-
-  verduras:Planta[] = listaVerduras;
-
-  constructor() { }
+  constructor(private plantaService:PlantaService) { }
 
   ngOnInit(): void {
+    this.list();
   }
 
-  frutaOverdura(value:boolean){
-    this.esFruta = value;
+  list(){
+    this.plantaService.list().subscribe(data=>{
+      this.plantas = data;
+    });
   }
 
-  pocaAgua(value:boolean){
-    if(value){
-      this.check[0] = 1;
+  revisarEsFruta(esFruta:boolean){
+    if(esFruta){
+      this.tipo = "Fruta";
     }else{
-      this.check[0] = -1;
+      this.tipo = "Verdura";
     }
   }
 
-  mediaAgua(value:boolean){
-    if(value){
-      this.check[1] = 2;
+  revisarPocaAgua(esPoca:boolean){
+    if(esPoca){
+      this.poca = "poca agua";
     }else{
-      this.check[1] = -1;
+      this.poca = "";
     }
   }
 
-  muchaAgua(value:boolean){
-    if(value){
-      this.check[2] = 3;
+  revisarMediaAgua(esMedia:boolean){
+    if(esMedia){
+      this.media = "media agua";
     }else{
-      this.check[2] = -1;
+      this.media = "";
     }
   }
+
+  revisarMuchaAgua(esMucha:boolean){
+    if(esMucha){
+      this.mucha = "mucha agua";
+    }else{
+      this.mucha = "";
+    }
+  }
+
 }

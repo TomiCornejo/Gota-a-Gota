@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
-import listaPost from 'src/assets/json/post.json';
+import { Foro } from 'src/app/models/foro.model';
+import { ForoService } from 'src/app/services/foro/foro.service';
 
 @Component({
   selector: 'app-foro-screen',
@@ -9,15 +9,23 @@ import listaPost from 'src/assets/json/post.json';
 })
 export class ForoScreenComponent implements OnInit {
 
-  posts:Post[] = listaPost;
+  foros:Foro[];
 
-  constructor() { }
+  constructor(private foroService:ForoService) { }
 
   ngOnInit(): void {
+    this.list();
   }
 
-  modalPost(post:Post){
-    this.posts.push(post);
+  list(){
+    this.foroService.list().subscribe(data =>{
+      this.foros = data;
+    });
   }
+
+  
+  // modalPost(post:Post){
+  //   this.posts.push(post);
+  // }
 
 }

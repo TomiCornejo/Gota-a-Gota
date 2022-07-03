@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-riego-screen.component.sass']
 })
 export class InfoRiegoScreenComponent implements OnInit {
+  
+  nombre:string;
+  img:string;
+
+  informacion:string;
+  fuente:string;
 
   constructor() { }
 
   ngOnInit(): void {
+    let plantita = JSON.parse(localStorage.getItem('plantita') || "[]");
+    this.nombre = plantita.nombre;
+    this.img = plantita.img;
+    this.informacion = plantita.informacion;
+    this.fuente = plantita.fuente;
   }
 
 }

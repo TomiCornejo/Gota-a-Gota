@@ -1,11 +1,19 @@
 export class Planta{
+    id:number;
     nombre:string;
-    imagen:string;
-    cantAgua:number;
+    tipo:string;
+    categoria:string;
+    informacion:string;
+    fuente:string;
+    img:string;
 
-    constructor(nombre:string,imagen:string,cantAgua:number){
+    constructor(nombre:string,tipo:string,categoria:string,informacion:string,fuente:string,img:string = "",id:number = 0){
         this.nombre = nombre;
-        this.imagen = imagen;
-        this.cantAgua = cantAgua;
+        this.tipo = tipo;
+        this.categoria = categoria;
+        this.informacion = informacion;
+        this.fuente = fuente;
+        this.id = id;
+        this.img = img;
     }
 }

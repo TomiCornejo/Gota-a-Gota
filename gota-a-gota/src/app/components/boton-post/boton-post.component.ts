@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
+import { Foro } from 'src/app/models/foro.model';
 
 @Component({
   selector: 'app-boton-post',
@@ -8,7 +8,7 @@ import { Post } from 'src/app/models/post.model';
 })
 export class BotonPostComponent implements OnInit {
 
-  @Output() subirPost = new EventEmitter<Post>();
+  // @Output() subirPost = new EventEmitter<Post>();
 
   titulo:string = '';
   descripcion:string = '';
@@ -23,11 +23,11 @@ export class BotonPostComponent implements OnInit {
     this.titulo = this.descripcion = '';
   }
 
-  publicar(){
-    this.subirPost.emit(new Post(this.titulo,this.descripcion));
-    this.cancelar();
-    this.flag = false;
-  }
+  // publicar(){
+  //   this.subirPost.emit(new Post(this.titulo,this.descripcion));
+  //   this.cancelar();
+  //   this.flag = false;
+  // }
 
   camposLlenos(){
     if(this.titulo == '' || this.descripcion == ''){

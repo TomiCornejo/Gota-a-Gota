@@ -8,7 +8,7 @@ import { NoticiasScreenComponent } from './screens/noticias-screen/noticias-scre
 import { PlantaScreenComponent } from './screens/planta-screen/planta-screen.component';
 import { PostScreenComponent } from './screens/post-screen/post-screen.component';
 import { RegistrarseScreenComponent } from './screens/registrarse-screen/registrarse-screen.component';
-import { SeguimientoScreenComponent } from './screens/seguimiento-screen/seguimiento-screen.component';
+// import { SeguimientoScreenComponent } from './screens/seguimiento-screen/seguimiento-screen.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/inicio-screen', pathMatch:'full'},
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'planta-screen', component:PlantaScreenComponent},
   {path:'post-screen', component:PostScreenComponent},
   {path:'registrarse-screen', component:RegistrarseScreenComponent},
-  {path:'seguimiento-screen', component:SeguimientoScreenComponent}
+  // {path:'seguimiento-screen', component:SeguimientoScreenComponent}
 ];
 
 @NgModule({

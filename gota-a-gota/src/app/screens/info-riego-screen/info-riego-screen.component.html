@@ -1,4 +1,9 @@
 <section>
-    <app-imagen-planta></app-imagen-planta>
-    <app-tabla-riego></app-tabla-riego>
+    <app-imagen-planta [img]="img" [nombre]="nombre"></app-imagen-planta>
+    <div class="card bg-success text-white col-6">
+        <div class="card-body">
+          <p class="card-text">{{informacion}}</p>
+          <a target="_blank" href="{{fuente}}" class="btn btn-success bg-gradient border-dark mx-auto d-block col-2">Fuente</a>
+        </div>
+      </div>
 </section>

@@ -21,7 +21,7 @@ export class IngresarComponent implements OnInit {
       this.usuarioService.get(this.nombre,this.clave).subscribe(data=>{
         if(data){
           sessionStorage.setItem('sitiomovil',JSON.stringify({"usuario":data.nombre,"icono":data.icono,"admin":data.admin}));
-          this.nombre = this.clave = 
+          this.nombre = this.clave = "";
           window.location.href="/inicio-screen";
         }else{
           alert("El nombre de usuario o contraseña no corresponden");

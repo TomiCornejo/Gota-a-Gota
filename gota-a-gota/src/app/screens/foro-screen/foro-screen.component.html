@@ -1,9 +1,10 @@
 <section class="container">
     <div class="row">
         <div class="col-12 pt-3">
-            <app-boton-post (subirPost)="modalPost($event)"></app-boton-post>
+            <!-- (subirPost)="modalPost($event)" -->
+            <app-boton-post ></app-boton-post>
         </div>
 
-        <app-mini-post *ngFor="let miniPost of posts" [miniPost]="miniPost"></app-mini-post>
+        <app-mini-post *ngFor="let foro of foros" [foro]="foro"></app-mini-post>
     </div>
 </section>

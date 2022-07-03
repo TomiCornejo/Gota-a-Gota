@@ -39,4 +39,9 @@ export class UsuarioService {
     let url = this.url + nombre + "/" + clave;
     return this.http.delete(url);
   }
+
+  getID(i:number):Observable<any>{
+    let url =  this.url + i;
+    return this.http.get(url);
+  }
 }
