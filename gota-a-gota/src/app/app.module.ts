@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +32,7 @@ import { IngresarComponent } from './components/ingresar/ingresar.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { ImagenPlantaComponent } from './components/imagen-planta/imagen-planta.component';
 import { TablaRiegoComponent } from './components/tabla-riego/tabla-riego.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoUsuarioComponent } from './components/info-usuario/info-usuario.component';
 import { AvisoComponent } from './components/aviso/aviso.component';
@@ -72,7 +74,9 @@ import { AvisoComponent } from './components/aviso/aviso.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
